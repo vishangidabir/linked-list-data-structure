@@ -11,7 +11,6 @@ public class LinkedListMain {
 		firstNode.next = secondNode;
 		secondNode.next = thirdNode;
 		Node tail = thirdNode;
-
 		Node temp = head;
 		while (temp != null) {
 			System.out.println(temp.data);
