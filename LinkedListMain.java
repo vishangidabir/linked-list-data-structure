@@ -13,5 +13,9 @@ public class LinkedListMain {
 		System.out.println("List after adding element in middle of the list is");
 		linkedList.addInBetween(56, 70, 30);
 		linkedList.toPrint();
+		System.out.println("Linked list after deleting first element");
+		linkedList.deleteFirst();
+		linkedList.toPrint();
+
 	}
 }
