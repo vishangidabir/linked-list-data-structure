@@ -26,5 +26,6 @@ public class Node {
 
 	public void toPrint() {
 		System.out.println(" " + data);
+
 	}
 }
