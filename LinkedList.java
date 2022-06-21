@@ -59,4 +59,15 @@ public class LinkedList {
 			secondLast.next = null;
 		}
 	}
+
+	// Method to find the node
+	public void findNode(int data) {
+		Node currentNode = head;
+		while (currentNode != null) {
+			if (currentNode.data == data) {
+				System.out.println(data + " Element found in the list ");
+			}
+			currentNode = currentNode.next;
+		}
+	}
 }
