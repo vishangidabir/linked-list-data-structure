@@ -42,9 +42,26 @@ public class LinkedList {
 		currentNode.next = node;
 	}
 
-	//Method to delete the first element of the list
-	public void deleteFirst() {
+	// Method to append element at desired position
+	public void appendingNode(int before, int data) {
 		Node currentNode = head;
-		head = head.next;
+		while (currentNode.data != before) {
+			currentNode = currentNode.next;
+		}
+		Node node = new Node(data);
+		node.next = currentNode.next;
+		currentNode.next = node;
+
+	}
+
+	// Method to find the node
+	public void findNode(int data) {
+		Node currentNode = head;
+		while (currentNode != null) {
+			if (currentNode.data == data) {
+				System.out.println(data + " Element found in the list ");
+			}
+			currentNode = currentNode.next;
+		}
 	}
 }
