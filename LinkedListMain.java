@@ -13,8 +13,11 @@ public class LinkedListMain {
 		System.out.println("List after adding element in middle of the list is");
 		linkedList.addInBetween(56, 70, 30);
 		linkedList.toPrint();
-		System.out.println("Linked list after deleting first element");
-		linkedList.deleteFirst();
+		System.out.println("Searching element");
+		linkedList.findNode(30);
+		linkedList.toPrint();
+		System.out.println("Element 40 added after node 30");
+		linkedList.appendingNode(30, 40);
 		linkedList.toPrint();
 
 	}
