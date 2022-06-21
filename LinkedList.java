@@ -1,44 +1,50 @@
 package com.bridgelabz;
 
 public class LinkedList {
-	 Node head;
+	Node head;
 
-	    //Method to insert elements at first node in linked list
-	    public void addFirstNode(int data) {
-	        Node node = new Node(data);
-	        node.setData(data);
-	        node.setNext(head);
-	        head = node;
-	    }
-
-	    //Method to insert elements at last node in linked list
-	    public void addLast(int data) {
-	        Node currentNode = head;
-	        while (currentNode.next != null) {
-	            currentNode = currentNode.next;
-	        }
-	        Node node = new Node(data);
-	        node.setData(data);
-	        currentNode.setNext(node);
-	    }
-
-	    //Method to print the list
-	    public void toPrint() {
-	        Node currentNode = head;
-	        while (currentNode != null) {
-	            currentNode.toPrint();
-	            currentNode = currentNode.next;
-	        }
-	    }
-
-	    //Method to insert the element in between the list
-	    public void addInBetween(int before, int after, int data) {
-	        Node currentNode = head;
-	        while (currentNode.data != before && currentNode.data != after) {
-	            currentNode = currentNode.next;
-	        }
-	        Node node = new Node(data);
-	        node.next = currentNode.next;
-	        currentNode.next = node;
-	    }
+	// Method to insert elements at first node in linked list
+	public void addFirstNode(int data) {
+		Node node = new Node(data);
+		node.setData(data);
+		node.setNext(head);
+		head = node;
 	}
+
+	// Method to insert elements at last node in linked list
+	public void addLast(int data) {
+		Node currentNode = head;
+		while (currentNode.next != null) {
+			currentNode = currentNode.next;
+		}
+		Node node = new Node(data);
+		node.setData(data);
+		currentNode.setNext(node);
+	}
+
+	// Method to print the list
+	public void toPrint() {
+		Node currentNode = head;
+		while (currentNode != null) {
+			currentNode.toPrint();
+			currentNode = currentNode.next;
+		}
+	}
+
+	// Method to insert the element in between the list
+	public void addInBetween(int before, int after, int data) {
+		Node currentNode = head;
+		while (currentNode.data != before && currentNode.data != after) {
+			currentNode = currentNode.next;
+		}
+		Node node = new Node(data);
+		node.next = currentNode.next;
+		currentNode.next = node;
+	}
+
+	//Method to delete the first element of the list
+	public void deleteFirst() {
+		Node currentNode = head;
+		head = head.next;
+	}
+}
